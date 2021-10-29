@@ -1,0 +1,71 @@
+<h2>Add bank:</h2>
+<form action="/" method="POST">
+    
+    <input type="text" id="bankname" name="bankname" placeholder="Bank name...">
+    <label for="bankname">Bank name</label>
+
+    
+    <input type="number" id="interest_rate" name="interest_rate" placeholder="Interest rate...">
+    <label for="interest_rate">Interest rate</label>
+
+    
+    <input type="number" id="max_mortgage" name="max_mortgage" placeholder="Maximal mortgage...">
+    <label for="max_mortgage">Maximal mortgage</label>
+
+   
+    <input type="number" id="advance_payment" name="advance_payment" placeholder="Advance payment...">
+     <label for="advance_payment">Advance payment</label>
+
+   
+    <input type="number" id="morgage_term" name="morgage_term" placeholder="Morgage term...">
+     <label for="morgage_term">Morgage term</label>
+
+    <button type="submit" class="btn">Create</button> 
+    
+    
+    <!-- <div class="input-field">
+        <input type="text" name="title">
+        <label>Bank name</label>  
+    </div>
+
+    <div class="input-field">
+        <input type="number" name="interest_rate">
+        <label>Interest rate</label>  
+    </div>
+
+    <div class="input-field">
+        <input type="number" name="max_mortgage">
+        <label>maximal mortgage</label>  
+    </div>
+
+    <div class="input-field">
+        <input type="number" name="advance_payment">
+        <label>advance payment</label>  
+    </div>
+
+    <div class="input-field">
+        <input type="number" name="morgage_term">
+        <label>mortgage term</label>  
+    </div> -->
+
+    
+</form>
+
+<h2>Bank list:</h2>
+
+{{#if bank_list.length}}
+<ul>
+    {{#each bank_list}}
+        <li class="bank">
+            <label>
+                <span>{{title}}</span>
+                
+                <button class="btn btn-small">Edit</button>
+                <button class="btn btn-small">Delete</button>
+            </label>
+        </li>
+    {{/each}}
+</ul>
+{{else}}
+<p>No banks</p>
+{{/if}}

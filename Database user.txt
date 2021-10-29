@@ -1,0 +1,2 @@
+login: Base_for_app
+pass: qwerty123
